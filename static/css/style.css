@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Garamond;
+}
+
+/* Sidebar */
+.sidebar{
+    width: 20%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 8px 12px 12px ;
+    background: #202123;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar .sidebar__newchat{
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 12px 16px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.sidebar .sidebar__newchat:hover{
+    background-color: #2b2c2f;
+}
+
+.sidebar .sidebar__newchat span:first-child{
+    padding-right: 8px;
+    font-size: 20px;
+}
+
+.sidebar .sidebar__menu ul li{
+    list-style: none;
+    padding: 12px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.sidebar .sidebar__menu ul li:hover{
+    background-color: #2b2c2f;
+}
+
+.sidebar .sidebar__menu ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.sidebar .sidebar__menu ul li a i{
+    width: 28px;
+    height: 20px;
+    padding-right: 8px;
+}
+
+.sidebar .sidebar__menu hr{
+    margin-bottom: 12px;
+}
+
+/* Main */
+.main{
+    float: right;
+    width: 80%;
+    min-height: 100vh;
+}
+
+h1 {
+    color: black;
+    margin-bottom: 0;
+    margin-top: 100px;
+    text-align: center;
+    font-size: 40px;
+}
+
+h3 {
+    color: black;
+    font-size: 20px;
+    margin-top: 3px;
+    text-align: center;
+}
+
+#chatbox {
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    margin-top: 60px;
+}
+
+#userInput {
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    margin-top: 60px;
+}
+
+#textInput {
+    width: 87%;
+    border: none;
+    border-bottom: 3px solid #009688;
+    font-family: monospace;
+    font-size: 17px;
+}
+
+#buttonInput {
+    padding: 3px;
+    font-family: monospace;
+    font-size: 17px;
+}
+
+.userText {
+    color: white;
+    font-family: monospace;
+    font-size: 17px;
+    text-align: right;
+    line-height: 30px;
+    margin-bottom: 30px;
+}
+
+.userText span {
+    background-color: #009688;
+    padding: 10px;
+    border-radius: 2px;
+}
+
+.botText {
+    color: white;
+    font-family: monospace;
+    font-size: 17px;
+    text-align: left;
+    line-height: 30px;
+    margin-bottom: 30px;
+}
+
+.botText span {
+    background-color: #EF5350;
+    padding: 10px;
+    border-radius: 2px;
+}
+
+#tidbit {
+    position:absolute;
+    bottom:0;
+    right:0;
+    width: 300px;
+}
