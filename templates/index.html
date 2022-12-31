@@ -6,17 +6,18 @@
   </head>
   <body>
     <nav class="sidebar">
-      <div class="sidebar__newchat">
+      <a class="sidebar__newchat" href="/">
           <span>+</span>
           <span>New chat</span>
-      </div>
+      </a>
       <div class="sidebar__menu">
           <hr>
           <ul>
-              <li>
-                  <a href="">
-                      <i class="fa-solid fa-moon"></i>
-                      <span>Dark Mode</span>
+              <li class="dark__mode">
+                  <a href="#">
+                      <i class="fa-solid fa-moon moon__mode"></i>
+                      <i class="fa-solid fa-sun sun__mode"></i>
+                      <span class="mode__text">Dark Mode</span>
                   </a>
               </li>
               <li>
@@ -42,15 +43,17 @@
   </nav>
 
   <section class="main">
-    <h1>ChatGPT</h1>
+    <h1>WebChatbot</h1>
     <h3>A web implementation of Chatbot by LTSM using Flask.</h3>
     <div>
       <div id="chatbox">
         <p class="botText"><span>Hi! I'm Chatbot.</span></p>
       </div>
       <div id="userInput">
-        <input id="textInput" type="text" name="msg" placeholder="Message">
-        <input id="buttonInput" type="submit" value="Send">
+        <input id="textInput" type="text" name="msg">
+        <button id="buttonInput" type="submit">
+          <i class="fa-regular fa-paper-plane"></i>
+        </button>
       </div>
     </div>
   </section>

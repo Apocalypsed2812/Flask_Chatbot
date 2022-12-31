@@ -1,7 +1,3 @@
-# load model
-# copy hàm của Thư qua
-# viết hàm chatbot => answer
-
 import re
 import numpy as np
 import pickle
