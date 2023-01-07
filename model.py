@@ -29,7 +29,6 @@ def str_to_tokens(sentence):
     flag = True
     for current_word in words:
         if((current_word in tokenizer_word_index) == False):
-            print(current_word in tokenizer_word_index)
             flag = False
             break
         result = tokenizer_word_index[current_word]
@@ -47,7 +46,7 @@ def chatbot(input):
         return 'Vui lòng nhập câu hỏi của bạn'
     str_tokens = str_to_tokens(input_question)
     if(type(str_tokens) == bool):
-        return 'Câu hỏi không hợp lệ'
+        return 'Không có dữ liệu cho câu hỏi này'
     else:
         states_values = enc_model.predict(str_tokens)
         empty_target_seq = np.zeros((1,1))
