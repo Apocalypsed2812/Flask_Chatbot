@@ -4,7 +4,26 @@ function getBotResponse() {
     $("#textInput").val("");
     $("#chatbox").append(userHtml);
     document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
-    $.get("/get", { msg: rawText }).done(function(data) {
+    // $.get("/get", { msg: rawText }).done(function(data) {
+    //   var botHtml = '<p class="botText"><span>' + data + '</span></p>';
+    //   $("#chatbox").append(botHtml);
+    //   document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
+    // });
+
+    // $.ajax({
+    //   url: '/post',
+    //   data: { msg: rawText },
+    //   processData: false,
+    //   contentType: false,
+    //   type: 'POST',
+    //   success: function(data){
+    //     var botHtml = '<p class="botText"><span>' + data + '</span></p>';
+    //     $("#chatbox").append(botHtml);
+    //     document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
+    //   }
+    // });
+
+    $.post("/post", { msg: rawText }).done(function(data) {
       var botHtml = '<p class="botText"><span>' + data + '</span></p>';
       $("#chatbox").append(botHtml);
       document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});

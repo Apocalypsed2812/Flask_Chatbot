@@ -7,9 +7,15 @@ app = Flask(__name__)
 def home():
     return render_template("index.html")
 
-@app.route("/get")
+# @app.route("/get")
+# def get_bot_response():
+#     userText = request.args.get('msg')
+#     result = chatbot(userText)
+#     return result
+
+@app.route("/post", methods = ['POST'])
 def get_bot_response():
-    userText = request.args.get('msg')
+    userText = request.form['msg']
     result = chatbot(userText)
     return result
     
